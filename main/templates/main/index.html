@@ -39,14 +39,20 @@
 								<div class="tab-content" id="v-pills-tabContent">
 
 									<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
-										<form action="#" class="search-property-1">
+										<form action="" class="search-property-1" method="POST">
+											{% csrf_token %}
 											<div class="row no-gutters">
 												<div class="col-md d-flex">
 													<div class="form-group p-4 border-0">
 														<label for="#">Universe</label>
 														<div class="form-field">
-															<div class="icon"><span class="fa fa-search"></span></div>
-															<input type="text" class="form-control" placeholder="Input Universe">
+															<div class="select-wrap">
+																<div class="icon"><span class="fa fa-chevron-down"></span></div>
+																<select name="universe" id="" class="form-control">
+																	<option value="KOSPI">KOSPI</option>
+																	<option value="KOSDAQ">KOSDAQ</option>
+																</select>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -55,7 +61,7 @@
 														<label for="#">시작일</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkin_date" placeholder="Start Date">
+															<input name="start" type="text" class="form-control checkin_date" value="01/01/2019">
 														</div>
 													</div>
 												</div>
@@ -64,7 +70,7 @@
 														<label for="#">종료일</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkout_date" placeholder="End Date">
+															<input name="end" type="text" class="form-control checkout_date" value="12/31/2019">
 														</div>
 													</div>
 												</div>
@@ -74,21 +80,11 @@
 														<div class="form-field">
 															<div class="select-wrap">
 																<div class="icon"><span class="fa fa-chevron-down"></span></div>
-																<select name="" id="" class="form-control">
-																	<option value="">$100</option>
-																	<option value="">$10,000</option>
-																	<option value="">$50,000</option>
-																	<option value="">$100,000</option>
-																	<option value="">$200,000</option>
-																	<option value="">$300,000</option>
-																	<option value="">$400,000</option>
-																	<option value="">$500,000</option>
-																	<option value="">$600,000</option>
-																	<option value="">$700,000</option>
-																	<option value="">$800,000</option>
-																	<option value="">$900,000</option>
-																	<option value="">$1,000,000</option>
-																	<option value="">$2,000,000</option>
+																<select name="money" id="" class="form-control">
+																	<option value="10000000">10,000,000원</option>
+																	<option value="100000000">100,000,000원</option>
+																	<option value="500000000">500,000,000원</option>
+																	<option value="1000000000">1,000,000,000원</option>
 																</select>
 															</div>
 														</div>
