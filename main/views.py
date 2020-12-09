@@ -51,6 +51,8 @@ def index(request):
         std_df['total_change']=std_df['kospi200']/std_df['kospi200'][std_df.index[0]]-1
 
         m_bt.visualize(std_df, 'kospi200', [bt_res], ['bt_res'])
+        cont = { 'tested' : True}
 
+        return render(request, 'main/index.html', cont)
 
     return render(request, 'main/index.html')

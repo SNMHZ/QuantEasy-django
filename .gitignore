@@ -3,4 +3,3 @@ __pycache__
 db.sqlite3
 *.DS_Store
 dbconnect.txt
-static/bt_img/

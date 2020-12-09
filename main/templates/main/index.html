@@ -99,7 +99,7 @@
 														<label for="#">시작일</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input name="start" type="text" class="form-control checkin_date" value="01/01/2019">
+															<input name="start" type="text" class="form-control checkin_date" value="1/1/2019">
 														</div>
 													</div>
 												</div>
@@ -211,6 +211,22 @@
 					</div>
 				</div>
 			</div>
+			{% if tested != None %}
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-12 text-center">
+						<div class="img"  style="background-image: url(static/bt_img/savefig_default.png);">
+							<div class="overlay">
+								<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% else %}
+			
+			{% endif %}
+		</div>
 		</section>
 
 		<!--
